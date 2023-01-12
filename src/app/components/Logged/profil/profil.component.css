@@ -1,91 +1,110 @@
 .generalCard{
     background-color: brown;
-    width: 100%;
-    height: 100%;
     display: flex;
     padding: 2em;
     margin-left: 2em;
 }
 
+@media screen and (min-width : 2540px) {
+	.generalCard {
+		width: auto;
+		height: auto;
+	}
+}
+
+@media screen and (max-width : 1980px) {
+	.generalCard {
+		width: auto;
+		height: auto;
+	}
+}
+
+@media screen and (max-width : 1280px) {
+	.generalCard {
+		width: auto;
+		height: auto;
+	}
+}
+
+@media screen and (max-width : 720px) {
+	.generalCard {
+		width: auto;
+		height: auto;
+        overflow-x: scroll;
+        overflow-y: scroll;
+	}
+}
+
 .profilCard{
     background-color: aqua;
     text-align: left;
+    display: flex;
+    flex-direction: column;
     width: 25%;
-    height: 100%;
-    display: block;
-    padding: 2em;
+    margin-right: 1em;
 }
 
 .informationsProfilCard{
     background-color: yellowgreen;
     width: 75%;
-    height: 100%;
-    padding: 2em;
+    margin-left: 1em;
 }
 
 .profilPhoto{
     background-color: blueviolet;
-    width: 100%;
-    height: 25%;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .pseudo{
     background-color: blue;
-    width: 100%;
-    height: 25%;
     margin-top: 1em;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .birthdayDate{
     background-color: green;
-    width: 100%;
-    height: 25%;
     margin-top: 1em;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .description{
     background-color: yellow;
-    width: 100%;
-    height: 25%;
     margin-top: 1em;
+    text-align: center;
 }
 
 .nameAndGender{
     background-color: cadetblue;
-    width: 100%;
-    height: 20%;
     margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1em;
 }
 
 .adress{
     background-color: burlywood;
-    width: 100%;
-    height: 20%;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding: 1em;
 }
 
 .zipCodeAndCity{
     background-color: orchid;
-    width: 100%;
-    height: 20%;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding: 1em;
 }
 
  .mail{
     background-color: white;
-    width: 100%;
-    height: 20%;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding: 1em;
 }
  .phoneNumerAndChangePassword{
     background-color: black;
-    width: 100%;
-    height: 20%;
     margin-top: 1em;
+    padding: 1em;
 }
