@@ -23,6 +23,8 @@
 	.generalCard {
 		width: auto;
 		height: auto;
+        overflow-x: scroll;
+        overflow-y: scroll;
 	}
 }
 
@@ -30,8 +32,6 @@
 	.generalCard {
 		width: auto;
 		height: auto;
-        overflow-x: scroll;
-        overflow-y: scroll;
 	}
 }
 
