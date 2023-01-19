@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { detailsUser } from '../models/detailsUser.model';
 import { User } from '../models/user.model';
 
 @Injectable({
@@ -50,5 +51,9 @@ export class UserService {
 
   userChangeFromService(user: User){
     return this.http.post('http://localhost:8080/users/userChange', user)
+  }
+
+  userDetailsFromService(name: String): Observable<detailsUser[]> {
+    return this.http.get('http://localhost:8080/details/getByName/' + name) as Observable<detailsUser[]> 
   }
 }

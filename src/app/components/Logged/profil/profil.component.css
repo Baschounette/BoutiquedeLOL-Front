@@ -1,5 +1,5 @@
 .generalCard{
-    background-color: brown;
+    /* background-color: brown; */
     display: flex;
     padding: 2em;
     margin-left: 2em;
@@ -36,7 +36,7 @@
 }
 
 .profilCard{
-    background-color: aqua;
+    background-color: #1c1c1c;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -45,66 +45,91 @@
 }
 
 .informationsProfilCard{
-    background-color: yellowgreen;
+    background-color: #1c1c1c;
     width: 75%;
     margin-left: 1em;
 }
 
 .profilPhoto{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     margin-bottom: 1em;
+    margin-top: 2em;
     text-align: center;
 }
 
 .pseudo{
-    background-color: blue;
+    /* background-color: blue; */
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
 }
 
 .birthdayDate{
-    background-color: green;
+    /* background-color: green; */
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
 }
 
 .description{
-    background-color: yellow;
+    /* background-color: yellow; */
     margin-top: 1em;
     text-align: center;
 }
 
 .nameAndGender{
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     margin-bottom: 1em;
     margin-top: 1em;
     padding: 1em;
 }
 
 .adress{
-    background-color: burlywood;
+    /* background-color: burlywood; */
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
 }
 
 .zipCodeAndCity{
-    background-color: orchid;
+    /* background-color: orchid; */
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
 }
 
  .mail{
-    background-color: white;
+    /* background-color: white; */
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
 }
  .phoneNumerAndChangePassword{
-    background-color: black;
+    /* background-color: black; */
     margin-top: 1em;
     padding: 1em;
+}
+
+img{
+    border-radius: 100%;
+}
+
+label {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+	margin-right: 15px;
+    color: #45f3ff;
+}
+
+input {
+	position: relative;
+	width: 300px;
+	margin-top: 35px;
+	margin-left: 15px;
+	margin-right: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #45f3ff;
+    
 }

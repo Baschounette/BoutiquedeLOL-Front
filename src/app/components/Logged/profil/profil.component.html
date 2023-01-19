@@ -1,39 +1,51 @@
 <div class="generalCard">
-    <div class="profilCard">
-        <div class="profilPhoto">
-            <img src="..\assets\images\Photo de profil\image_yumi.png" width="64px" height="">
+    <!-- <div *ngFor="let detailsUser of userDetail"> -->
+        <div class="profilCard">
+            <div class="profilPhoto">
+                <img src="..\assets\images\Photo de profil\image_yumi.png" width="128px" height="128px">
+            </div>
+            <div class="pseudo">
+                <label>Pseudo</label>
+                <input type="text" placeholder="{{userDetail[0].name}}">
+            </div>
+            <div class="birthdayDate">
+                <label>Date de Naissance</label>
+                <input type="date" value="{{userDetail[0].birthdate | date: 'shortDate'}}">
+            </div>
+            <div class="description">
+                <textarea name="descriptionProfil" id="profilDescription" cols="27" rows="10" placeholder="{{userDetail[0].description}}"></textarea>
+            </div>
         </div>
-        <div class="pseudo">
-            <input type="text">
+        <div class="informationsProfilCard">
+            <div class="nameAndGender">
+                <label>Genre</label>
+                <input type="text" placeholder="{{userDetail[0].gender}}">
+                <label>Nom</label>
+                <input type="text" placeholder="{{userDetail[0].lastName}}">
+                <label>Prénom</label>
+                <input type="text" placeholder="{{userDetail[0].firstName}}">
+                
+            </div>
+            <div class="adress">
+                <label>Adresse Postale</label>
+                <input type="text" placeholder="{{userDetail[0].address}}">  
+            </div>
+            <div class="zipCodeAndCity">
+                <label>Code Postale</label>
+                <input type="text" placeholder="{{userDetail[0].zipCode}}">
+                <label>ville</label>
+                <input type="text" placeholder="{{userDetail[0].city}}">
+            </div>
+            <div class="mail">
+                <label>Adresse Email</label>
+                <input type="email" placeholder="{{userDetail[0].mail}}">
+            </div>
+            <div class="phoneNumerAndChangePassword">
+                <label>Numéro de téléphone</label>
+                <input type="tel" class="phone" placeholder="{{userDetail[0].phoneNumber}}">
+                <label>Mot de passe</label>
+                <input type="password" class="password" placeholder="{{userDetail[0].password}}">
+            </div>
         </div>
-        <div class="birthdayDate">
-            <input type="date">
-        </div>
-        <div class="description">
-            <textarea name="descriptionProfil" id="profilDescription" cols="27" rows="10"></textarea>
-
-        </div>
-    </div>
-    <div class="informationsProfilCard">
-        <div class="nameAndGender">
-            <input type="text">Genre
-            <input type="text">Nom
-            <input type="text">Prénom
-            
-        </div>
-        <div class="adress">
-            <input type="text"> adresse postale :  
-        </div>
-        <div class="zipCodeAndCity">
-            <input type="text"> code postale
-            <input type="text"> ville
-        </div>
-        <div class="mail">zdzdzd
-            <input type="email">
-        </div>
-        <div class="phoneNumerAndChangePassword">zdzdaa
-            <input type="tel">
-            <input type="password">
-        </div>
-    </div>    
+    <!-- </div>     -->
 </div>
