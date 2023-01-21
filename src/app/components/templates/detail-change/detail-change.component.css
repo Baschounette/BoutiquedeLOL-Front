@@ -1,0 +1,200 @@
+.userChange {
+	position: fixed;
+	top: 24%;
+	left: 35%;
+	width: 500px;
+	height: 570px;
+	background: #1c1c1c;
+	border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+	overflow: auto;
+}
+
+.userChange::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width : 2540px) {
+	.userChange {
+		top: 24%;
+		left: 40.157%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+@media screen and (max-width : 1980px) {
+	.userChange {
+		top: 24%;
+		left: 37.37%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+@media screen and (max-width : 1280px) {
+	.userChange {
+		top: 24%;
+		left: 30.47%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+@media screen and (max-width : 720px) {
+	.userChange {
+		top: 24%;
+		left: 15.28%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+form {
+	position: absolute;
+	inset: 2px;
+	background: #28292d;
+	padding: 30px;
+	border-radius: 8px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+    text-align: center;
+}
+
+h2 {
+	color: #45f3ff;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+
+.inputName, .inputPassword, .inputMail, .inputRole {
+	position: relative;
+	width: 400px;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.inputName input, .inputPassword input, .inputMail input, .inputRole input {
+	position: relative;
+	width: 100%;
+	padding: 20px 10px 10px;
+	background: transparent;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	color: #23242a;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	z-index: 10;
+}
+
+.inputName span, .inputPassword span, .inputMail span, .inputRole span {
+	position: absolute;
+	left: 0;
+	padding: 0px 0px 10px;
+    margin-top: -25px;
+	pointer-events: none;
+	font-size: 1em;
+	color: #8f8f8f;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+}
+
+.inputName input:valid ~ span,
+.inputName input:focus ~ span {
+	color: #a44179;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
+.inputPassword input:valid ~ span,
+.inputPassword input:focus ~ span {
+	color: #09ff00;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
+.inputMail input:valid ~ span,
+.inputMail input:focus ~ span {
+	color: #e5ff00d7;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
+.inputRole input:valid ~ span,
+.inputRole input:focus ~ span {
+	color: #ff7b00;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
+.inputName i, .inputPassword i, .inputMail i, .inputRole i {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #45f3ff;
+	border-radius: 4px;
+	overflow: hidden;
+	transition: 0.5s;
+	pointer-events: none;
+	z-index: 9;
+}
+
+.inputName input:valid ~ i,
+.inputName input:focus ~ i
+ {
+	height: 44px;
+	background: #a44179;
+}
+
+.inputPassword input:valid ~ i,
+.inputPassword input:focus ~ i {
+	height: 44px;
+	background: #09ff00;
+}
+
+.inputMail input:valid ~ i,
+.inputMail input:focus ~ i {
+	height: 44px;
+	background: #e5ff00d7;
+}
+
+.inputRole input:valid ~ i,
+.inputRole input:focus ~ i {
+	height: 44px;
+	background: #ff7b00;
+}
+
+.finalButton {
+    color: black;
+    font-weight: 600;
+    background-color: #45f3ff;
+    padding: 3%;
+	width: 300px;
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.finalButton:hover {
+    background-color: #e31212;
+}
+
+.closeForm {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	background-color: red;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
