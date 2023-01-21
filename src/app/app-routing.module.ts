@@ -9,6 +9,7 @@ import { SidebarComponent } from './components/Logged/sidebar/sidebar.component'
 import { AppComponent } from './app.component';
 import { Product2Component } from './components/product2/product2.component';
 import { UsersChangeComponent } from './components/templates/users-change/users-change.component';
+import { DetailChangeComponent } from './components/templates/detail-change/detail-change.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'sidebar', component: SidebarComponent},
   { path: '', component: AppComponent},
   { path: 'usersChange', component: UsersChangeComponent},
+  { path: 'detailChange', component: DetailChangeComponent},
 ];
 
 @NgModule({

@@ -1,9 +1,9 @@
 export interface detailsUser {
     id: number;
     userId: number;
-    name: String;
-    mail: String;
-    password: String;
+    name: string;
+    mail: string;
+    password: string;
     lastName: string;
     firstName: string;
     gender: string;

@@ -1,49 +1,62 @@
 <div class="generalCard">
         <div class="profilCard">
             <div class="profilPhoto">
-                <img src="..\assets\images\Photo de profil\image_yumi.png" width="128px" height="128px">
+                <img src="..\assets\images\Photo de profil\image_yumi.png" width="128px" height="128px" class="profilImage">
             </div>
             <div class="pseudo">
                 <label>Pseudo</label>
-                <input type="text" placeholder="{{userDetail[0].name}}">
+                <input type="text" placeholder="{{userDetail[0].name}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('name')">
             </div>
             <div class="birthdayDate">
                 <label>Date de Naissance</label>
                 <input type="date" value="{{userDetail[0].birthdate | date: 'shortDate'}}">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('birthdate')">
             </div>
             <div class="description">
-                <textarea name="descriptionProfil" id="profilDescription" cols="27" rows="10" placeholder="{{userDetail[0].description}}"></textarea>
+                <textarea name="descriptionProfil" id="profilDescription" cols="27" rows="10" placeholder="{{userDetail[0].description}}" readonly="readonly"></textarea>
             </div>
         </div>
         <div class="informationsProfilCard">
             <div class="nameAndGender">
                 <label>Genre</label>
-                <input type="text" placeholder="{{userDetail[0].gender}}">
+                <input type="text" placeholder="{{userDetail[0].gender}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('gender')">
                 <label>Nom</label>
-                <input type="text" placeholder="{{userDetail[0].lastName}}">
+                <input type="text" placeholder="{{userDetail[0].lastName}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('lastName')">
                 <label>Prénom</label>
-                <input type="text" placeholder="{{userDetail[0].firstName}}">
+                <input type="text" placeholder="{{userDetail[0].firstName}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('firstName')">
                 
             </div>
             <div class="adress">
                 <label>Adresse Postale</label>
-                <input type="text" placeholder="{{userDetail[0].address}}">  
+                <input type="text" placeholder="{{userDetail[0].address}}" readonly="readonly">  
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('address')">
             </div>
             <div class="zipCodeAndCity">
                 <label>Code Postale</label>
-                <input type="text" placeholder="{{userDetail[0].zipCode}}">
+                <input type="text" placeholder="{{userDetail[0].zipCode}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('zipCode')">
                 <label>ville</label>
-                <input type="text" placeholder="{{userDetail[0].city}}">
+                <input type="text" placeholder="{{userDetail[0].city}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('city')">
             </div>
             <div class="mail">
                 <label>Adresse Email</label>
-                <input type="email" placeholder="{{userDetail[0].mail}}">
+                <input type="email" placeholder="{{userDetail[0].mail}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('mail')">
             </div>
             <div class="phoneNumerAndChangePassword">
                 <label>Numéro de téléphone</label>
-                <input type="tel" class="phone" placeholder="{{userDetail[0].phoneNumber}}">
-                <label>Mot de passe</label>
-                <input type="password" class="password" placeholder="{{userDetail[0].password}}">
+                <input type="tel" class="phone" placeholder="{{userDetail[0].phoneNumber}}" readonly="readonly">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('phoneNumber')">
+                <button class="changePassword">Modifier le mot de passe</button>
             </div>
         </div>
+</div>
+
+<div class="modale" >
+    <app-detail-change *ngIf="detailChange" (closeModale)="detailChangesCloseModale($event)" [userDetail]="userDetail" [displayInput]="displayInput"></app-detail-change>
 </div>

@@ -1,0 +1,59 @@
+<div class="userChange">
+    <form autocomplete="off">
+        <button class="closeForm" (click)="detailChangesCloseModale()">x</button>
+        <h2>Modification Profil Utilisateur</h2>
+        <div>
+            <div class="inputName" *ngIf="displayInput === 'name'">
+                <input type="text" autocomplete="off" name="name" ngModel required>
+                <span> {{userDetail[0].name}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'gender'">
+                <input type="text" autocomplete="off" name="gender" ngModel required>
+                <span> {{userDetail[0].gender}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'lastName'">
+                <input type="text" autocomplete="off" name="lastName" ngModel required>
+                <span> {{userDetail[0].lastName}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'firstName'">
+                <input type="text" autocomplete="off" name="firstName" ngModel required>
+                <span> {{userDetail[0].firstName}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'address'">
+                <input type="text" autocomplete="off" name="address" ngModel required>
+                <span> {{userDetail[0].address}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'zipCode'">
+                <input type="number" autocomplete="off" name="zipCode" ngModel required>
+                <span> {{userDetail[0].zipCode}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'city'">
+                <input type="text" autocomplete="off" name="city" ngModel required>
+                <span> {{userDetail[0].city}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'mail'">
+                <input type="email" autocomplete="off" name="mail" ngModel required>
+                <span> {{userDetail[0].mail}} </span>
+                <i></i>
+            </div>
+            <div class="inputName" *ngIf="displayInput === 'phoneNumber'">
+                <input type="tel" autocomplete="off" name="phoneNumber" ngModel required>
+                <span> {{userDetail[0].phoneNumber}}</span>
+                <i></i>
+            </div>
+
+        </div>
+        <div>
+            <button class="finalButton" type="submit">Modifier</button>
+        </div>
+    </form>
+</div>
+
+<div class="disableBackground"></div>   

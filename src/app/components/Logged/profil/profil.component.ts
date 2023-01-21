@@ -1,5 +1,4 @@
-import { DatePipe, formatDate } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { detailsUser } from 'src/app/models/detailsUser.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -8,10 +7,13 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.css']
 })
-export class ProfilComponent {
+export class ProfilComponent implements OnInit {
 
   public userDetail: detailsUser[] = [];
   public name!: string;
+  public detailChange = false;
+  public filters: string = '';
+  public displayInput: string = '';
 
   constructor(private userService: UserService){}
 
@@ -25,5 +27,14 @@ export class ProfilComponent {
       this.userDetail = res;
       console.log(res);
     }) 
+  }
+
+  detailsChangeOpenModale(value: string){
+    this.detailChange = true;
+    this.displayInput = value;
+  }
+
+  detailChangesCloseModale(event: boolean){
+    this.detailChange = event;
   }
 } 

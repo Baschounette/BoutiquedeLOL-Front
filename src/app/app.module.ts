@@ -26,6 +26,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { Product2Component } from './components/product2/product2.component';
 import { UsersChangeComponent } from './components/templates/users-change/users-change.component';
+import { DetailChangeComponent } from './components/templates/detail-change/detail-change.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { UsersChangeComponent } from './components/templates/users-change/users-
     ReservationComponent,
     Product2Component,
     UsersChangeComponent,
+    DetailChangeComponent
   ],
   imports: [
     BrowserModule,
