@@ -1,5 +1,5 @@
 <div class="userChange">
-    <form autocomplete="off">
+    <form (ngSubmit)="detailChange(user)" #user="ngForm" autocomplete="off">
         <button class="closeForm" (click)="detailChangesCloseModale()">x</button>
         <h2>Modification Profil Utilisateur</h2>
         <div>
@@ -8,11 +8,21 @@
                 <span> {{userDetail[0].name}} </span>
                 <i></i>
             </div>
-            <div class="inputName" *ngIf="displayInput === 'gender'">
+            <!-- <div class="inputName" *ngIf="displayInput === 'gender'">
                 <input type="text" autocomplete="off" name="gender" ngModel required>
                 <span> {{userDetail[0].gender}} </span>
                 <i></i>
-            </div>
+            </div> -->
+            <div *ngIf="displayInput === 'gender'" class="inputRadio">
+                <label>
+                    <p>Homme</p>
+                    <input type="radio" name="gender" value="Homme" ngModel required>
+                </label>
+                <label>
+                    <p>Femme</p>
+                    <input type="radio" name="gender" value="Femme" ngModel required>
+                </label>
+            </div> 
             <div class="inputName" *ngIf="displayInput === 'lastName'">
                 <input type="text" autocomplete="off" name="lastName" ngModel required>
                 <span> {{userDetail[0].lastName}} </span>

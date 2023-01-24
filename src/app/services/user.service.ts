@@ -56,4 +56,8 @@ export class UserService {
   userDetailsFromService(name: String): Observable<detailsUser[]> {
     return this.http.get('http://localhost:8080/details/getByName/' + name) as Observable<detailsUser[]> 
   }
+
+  detailChangeFromService(user: detailsUser){
+    return this.http.post('http://localhost:8080/details/detailChange', user)
+  }
 }

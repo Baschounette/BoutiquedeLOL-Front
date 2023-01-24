@@ -198,3 +198,26 @@ h2 {
 	border-radius: 4px;
 	cursor: pointer;
 }
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    margin-top: 0.25em;
+	border-radius: 5px;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #45f3ff;
+	transition: 0.2s all linear;
+	cursor: pointer;
+}
+
+input[type="radio"]:checked {
+	background-color: #ff7b00;
+}
+
+.inputRadio {
+	display: flex;
+	justify-content: center;
+	gap: 5em;
+}
