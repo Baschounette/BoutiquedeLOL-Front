@@ -13,5 +13,5 @@ export interface detailsUser {
     zipCode: number;
     city: string;
     phoneNumber: string;
-    detailImage: string; 
+    image: string; 
 }
