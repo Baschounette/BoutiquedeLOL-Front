@@ -37,11 +37,12 @@
 
 .profilCard{
     background-color: #1c1c1c;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     width: 25%;
-    margin-right: 1em;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .informationsProfilCard{
@@ -51,48 +52,54 @@
 }
 
 .profilPhoto{
-    /* background-color: blueviolet; */
     margin-bottom: 1em;
     margin-top: 2em;
     text-align: center;
 }
 
 .pseudo{
-    /* background-color: blue; */
     margin-top: 0em;
     margin-bottom: 1em;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .birthdayDate{
-    /* background-color: green; */
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
 }
 
-.description{
-    /* background-color: yellow; */
+.Description{
     margin-top: 1em;
     text-align: center;
 }
 
+.profilDescription{
+    background: #FCC987;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 200px;
+    margin-top: 1em;
+}
+
 .nameAndGender{
-    /* background-color: cadetblue; */
     margin-bottom: 1em;
     margin-top: 1em;
     padding: 1em;
 }
 
 .adress{
-    /* background-color: burlywood; */
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
 }
 
 .zipCodeAndCity{
-    /* background-color: orchid; */
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
@@ -100,13 +107,11 @@
 }
 
  .mail{
-    /* background-color: white; */
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
 }
  .phoneNumerAndChangePassword{
-    /* background-color: black; */
     margin-top: 1em;
     padding: 1em;
 }
@@ -139,6 +144,17 @@ input {
 .detailsChange{
     vertical-align: middle;
     cursor: pointer;
+}
+
+.descriptionModified{
+    border: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: aqua;
+    border-radius: 4px;
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .changePassword{

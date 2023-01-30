@@ -8,11 +8,15 @@
                 <span> {{userDetail[0].name}} </span>
                 <i></i>
             </div>
-            <!-- <div class="inputName" *ngIf="displayInput === 'gender'">
-                <input type="text" autocomplete="off" name="gender" ngModel required>
-                <span> {{userDetail[0].gender}} </span>
+            <div *ngIf="displayInput === 'image'" class="inputName">
+                <input type="url" name="detailImage" ngModel required>
+                <span>image</span>
                 <i></i>
-            </div> -->
+            </div>
+            <div *ngIf="displayInput === 'description'">
+                <label class="descriptionLabel">Description :</label>
+                <textarea class="textAeraDescription"  name="description" cols="27" rows="10" ngModel required>{{userDetail[0].description}}</textarea>
+            </div>
             <div *ngIf="displayInput === 'gender'" class="inputRadio">
                 <label>
                     <p>Homme</p>

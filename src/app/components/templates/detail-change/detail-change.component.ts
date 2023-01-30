@@ -40,6 +40,8 @@ export class DetailChangeComponent implements OnInit {
       case 'city': this.detailsChanged.city = user.value.city; break;
       case 'mail': this.detailsChanged.mail = user.value.mail; break;
       case 'phoneNumber': this.detailsChanged.phoneNumber = user.value.phoneNumber; break;
+      case 'description': this.detailsChanged.description = user.value.description; break;
+      case 'image': this.detailsChanged.detailImage = user.value.detailImage; break;
     }
     this.userService.detailChangeFromService(this.detailsChanged).subscribe(res => {
       this.detailChangesCloseModale();

@@ -1,7 +1,8 @@
 <div class="generalCard">
         <div class="profilCard">
             <div class="profilPhoto">
-                <img src="..\assets\images\Photo de profil\image_yumi.png" width="128px" height="128px" class="profilImage">
+                <img src="{{userDetail[0].detailImage}}" width="128px" height="128px" class="profilImage">
+                <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('image')">
             </div>
             <div class="pseudo">
                 <label>Pseudo</label>
@@ -14,7 +15,10 @@
                 <img src="../assets/images/logos/crayon24.png" class="detailsChange" (click)="detailsChangeOpenModale('birthdate')">
             </div>
             <div class="description">
-                <textarea name="descriptionProfil" id="profilDescription" cols="27" rows="10" placeholder="{{userDetail[0].description}}" readonly="readonly"></textarea>
+                <textarea name="descriptionProfil" id="profilDescription" cols="27" rows="10" placeholder="{{userDetail[0].description}}" readonly="readonly" class="profilDescription"></textarea>
+            </div>
+            <div class="buttonDescription">
+                <button class="descriptionModified" (click)="detailsChangeOpenModale('description')"> Modifier la description </button>
             </div>
         </div>
         <div class="informationsProfilCard">
