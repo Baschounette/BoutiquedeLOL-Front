@@ -102,6 +102,73 @@ input[type="radio"]:checked {
 
 .card {
     margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    background: #28292d;
+    border: 2px solid #1c1c1c;
+    border-radius: 4px;
+    position: relative;
+}
+
+.type {
+    color: white;
+    letter-spacing: 0.05em;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 102, 246, 0.5);
+    box-shadow: 0px 0px 10px 5px black;
+    padding: 0.25em;
+    border-radius: 5px;
+}
+
+.details {
+    background-color: #FAFF66;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.75em;
+    height: 50px;
+    overflow-y: hidden;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 0.75em;
+}
+
+.price h3 {
+    color: #ff7b00;
+    font-size: 1.5em;
+}
+
+.price h2 {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.price span {
+    color: white;
+    font-size: 0.75em;
+    margin-right: 5px;
+}
+
+.superbutton {
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: aqua;
+    border-radius: 4px;
+}
+
+.superbutton:hover {
+    background-color: red;
+    transition: 0.5s;
 }
 
 /* Stylisation de l'input type number pour empecher les boutons d'incrémentations
