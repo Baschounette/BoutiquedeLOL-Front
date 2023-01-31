@@ -61,16 +61,17 @@
         <div *ngFor="let product of products">
             <div class="card">
                 <img src="{{product.image}}">
+                <h2>{{product.name}}</h2>
+                <h3 class="type">{{product.type}}</h3>
                 <div class="details">
-                    <h2>{{product.name}}</h2>
-                    <h3>{{product.type}}</h3>
                     <p>{{product.lore}}</p>
                 </div>
                 <div class="price">
                     <h3>{{product.price}} RP</h3>
-                    <h3>{{product.available}}</h3>
+                    <h2 *ngIf="product.available"><span>Disponible : </span><img src="../assets/images/logos/verifie.png"></h2>
+                    <h2 *ngIf="!product.available"><span>Disponible : </span><img src="../assets/images/logos/remove.png"></h2>
                 </div>
-                <button>Ajouter au panier</button>
+                <button class="superbutton">Ajouter au panier</button>
             </div>
         </div>
     </div>
