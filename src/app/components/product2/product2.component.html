@@ -71,7 +71,7 @@
                     <h2 *ngIf="product.available"><span>Disponible : </span><img src="../assets/images/logos/verifie.png"></h2>
                     <h2 *ngIf="!product.available"><span>Disponible : </span><img src="../assets/images/logos/remove.png"></h2>
                 </div>
-                <button class="superbutton">Ajouter au panier</button>
+                <button class="superbutton" (click)="addToStore(product)">Ajouter au panier</button>
             </div>
         </div>
     </div>

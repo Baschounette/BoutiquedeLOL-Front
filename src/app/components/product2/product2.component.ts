@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -14,7 +15,7 @@ export class Product2Component implements OnInit {
   public productsBuffer!: Product[];
   public filters: String = '';
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private cookieService: CookieService) { }
   
   ngOnInit(): void {
       this.getAllProduct();
@@ -55,63 +56,7 @@ export class Product2Component implements OnInit {
     }
   }
   
-  // searchByMage() {
-  //   this.filters = "Mage"
-  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchByFighter() {
-  //   this.filters = "Combattant"
-  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchByAssassin() {
-  //   this.filters = "Assassin"
-  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchByTank() {
-  //   this.filters = "Tank"
-  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchBySupport() {
-  //   this.filters = "Support"
-  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchByShooter() {
-  //   this.filters = "Tireur"
-  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchByAsc() {
-  //   this.productService.getAllProductOrderByAscFromService().subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchBydesc() {
-  //   this.productService.getAllProductOrderByDescFromService().subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchByPriceAsc() {
-  //   this.productService.getAllProductOrderByPriceAscFromService().subscribe((res: Product[]) => {
-  //     this.products = res;
-  //   }) 
-  // }
-  // searchByPriceDesc() {
-  //   this.productService.getAllProductOrderByPriceDescFromService().subscribe((res: Product[]) => {
-  //     this.products = res;
-  //     this.products = this.products.sort()
-  //   }) 
-  // }
-  
-
+  addToStore(product: Product){
+    this.cookieService.set('Panier', JSON.stringify(product), {expires: 0.0021})
+  }
 }
