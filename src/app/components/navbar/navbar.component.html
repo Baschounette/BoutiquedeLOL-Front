@@ -11,6 +11,7 @@
         <li><button routerLink="product2" type="button">Produits</button></li>
         <li><button *ngIf="!connected" routerLink="login" type="button">Se connecter</button></li>
         <li><button *ngIf="!connected" routerLink="register" type="button">S'inscrire</button></li>
+        <li><button *ngIf="connected" routerLink="store" type="button">Mon Panier</button></li>
         <li><button *ngIf="connected" (click)="deconnect()" type="button">Se Déconnecter</button></li>
     </div>
 </ul>

@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { Product2Component } from './components/product2/product2.component';
 import { UsersChangeComponent } from './components/templates/users-change/users-change.component';
 import { DetailChangeComponent } from './components/templates/detail-change/detail-change.component';
+import { StoreComponent } from './components/Logged/store/store.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path: '', component: AppComponent},
   { path: 'usersChange', component: UsersChangeComponent},
   { path: 'detailChange', component: DetailChangeComponent},
+  { path: 'store', component: StoreComponent},
+
 ];
 
 @NgModule({

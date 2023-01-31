@@ -27,6 +27,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { Product2Component } from './components/product2/product2.component';
 import { UsersChangeComponent } from './components/templates/users-change/users-change.component';
 import { DetailChangeComponent } from './components/templates/detail-change/detail-change.component';
+import { StoreComponent } from './components/Logged/store/store.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { DetailChangeComponent } from './components/templates/detail-change/deta
     ReservationComponent,
     Product2Component,
     UsersChangeComponent,
-    DetailChangeComponent
+    DetailChangeComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
