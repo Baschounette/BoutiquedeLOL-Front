@@ -58,28 +58,15 @@ export class Product2Component implements OnInit {
   
   addToStore(product: Product){
     if(!this.cookieService.get('Panier')){
+      console.log("coucou");
       this.cookieService.set('Panier', JSON.stringify(product), {expires: 0.041})
     } else { 
       console.log(JSON.parse(this.cookieService.get('Panier')));
-      if(JSON.parse(this.cookieService.get('Panier'))){
-        console.log("coucou");
-        
-        let panier: Product[] = [];
+        console.log("Bye bye");
+         const panier: Product [] = [];
         panier.push(JSON.parse(this.cookieService.get('Panier')));
         panier.push(product);
-        this.cookieService.delete('Panier')
         this.cookieService.set('Panier', JSON.stringify(panier), {expires: 0.041})
-      } else {
-        console.log("Bye bye");
-        
-        let panier2: Product[] = JSON.parse(this.cookieService.get('Panier'))
-        panier2.push(product)
-        this.cookieService.delete('Panier')
-        this.cookieService.set('Panier', JSON.stringify(panier2), {expires: 0.041})
-      }
-     
-         
+      }         
     }
-
-  }
 }
