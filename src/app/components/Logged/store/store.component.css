@@ -1,0 +1,54 @@
+.general{
+    width: max-content;
+    background-color: #28292d;
+    border-radius: 15px;
+    margin-left: 3em;
+    padding: 2em 3em 1em 2em;
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: 1fr;
+    text-align: center;
+    background-color: rgba(69, 243, 255, 0.7);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    color: purple;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    }
+
+    .parent:hover{
+        transform: translateY(-4%);
+        transition: 0.25s;
+        background-color: orange;
+        color: blueviolet;
+    }
+    
+    .name {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .image {
+        width: 50%;
+        margin: auto;
+        padding: 0.25em;
+    }
+    .price { 
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .type {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .delete {
+        margin-top: auto;
+        margin-bottom: auto;
+        cursor: pointer;
+    }
