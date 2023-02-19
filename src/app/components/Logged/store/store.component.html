@@ -1,18 +1,30 @@
-<div class="general">
-    <h2>Mon panier</h2>
-    <div *ngFor="let product of store " class="parent">
-        <div class="name">{{product.name}}</div>
-        <div class="image"><img src="{{product.image}}" class="image"></div>
-        <div class="price">{{product.price}} RP</div>
-        <div class="type">type : {{product.type}}</div>
-        <div class="delete"><img src="../assets/images/logos/remove24.png"></div>
+<div class="generalCard">
+    <div class="general">
+        <h2 class="storeTitle">Mon panier</h2>
+        <div *ngIf="totalChampion > 0">
+            <div *ngFor="let product of store " class="parent">
+            <div class="name">{{product.name}}</div>
+            <div class="image"><img src="{{product.image}}" class="image"></div>
+            <div class="price">{{product.price}} RP</div>
+            <div class="type">type : {{product.type}}</div>
+            <div class="delete"><img src="../assets/images/logos/remove24.png" (click)=" deleteChampion(product)"></div>
+            </div>
+        </div>
+        <div *ngIf="totalChampion === 0">
+            Ce Panier est vide :'(
+        </div>   
+    </div>
+    <div class="validationCard">
+        <h2 class="storeTitle">Récapitulatif panier :</h2>
+        <div class="price"> Prix total : {{finalPrice}} RP</div> 
+        <div class="totalChampion"> Total des champions : {{totalChampion}} champions</div>
+        <button class="submitButtonValidate" (click)="validateStoreButton()">Passer commande</button>
+        <button class="submitButtonDelete" (click)="deleteStoreButton()" >Supprimer le panier</button>
     </div>
 </div>
 
-<div class="validationCard">
-    {{finalPrice}}
-    {{totalChampion}}
-</div>
+<app-delete-store *ngIf="deleteStore" (deleteStoreFunction)="deleteStoreFunction($event)" (closeModale)="closeModales($event)"></app-delete-store>
+<app-validate-store *ngIf="validateStore" (validateStoreFunction)="validateStoreFunction($event)" (closeModale)="closeModales($event)"></app-validate-store>
 
 
 

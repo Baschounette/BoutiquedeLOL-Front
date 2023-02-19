@@ -1,4 +1,9 @@
+.generalCard{
+    display: flex;
+
+}
 .general{
+    min-width: 53.5%;
     width: max-content;
     background-color: #28292d;
     border-radius: 15px;
@@ -6,6 +11,50 @@
     padding: 2em 3em 1em 2em;
     max-height: 70%;
     overflow-y: auto;
+    color: blueviolet;
+    text-align: center;
+}
+
+.validationCard{
+    width: max-content;
+    background-color: #28292d;
+    border-radius: 15px;
+    padding: 2em 3em 1em 2em;
+    overflow-y: auto;
+    text-align: center;
+    margin: 0 10px;
+}
+
+ .totalChampion, .price {
+    color: blueviolet;
+    margin-top: 1em;
+
+ }
+
+ .submitButtonDelete, .submitButtonValidate{
+    color: black;
+    font-weight: 600;
+    background-color: #45f3ff;
+    padding: 35px;
+	width: 300px;
+    margin-top: 4em;
+    margin: 50px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+ }
+
+.submitButtonValidate:hover{
+    background-color: green;
+}
+ .submitButtonDelete:hover{
+    background-color: red;
+ }
+
+.storeTitle{
+    text-align: center;
+    color: purple;
+    text-decoration: underline solid purple;
+    text-underline-offset: 6px;
 }
 
 

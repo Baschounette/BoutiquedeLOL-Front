@@ -1,0 +1,98 @@
+.userChange {
+	position: fixed;
+	top: 24%;
+	left: 35%;
+	width: 500px;
+	height: 570px;
+	background: #1c1c1c;
+	border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+	overflow: auto;
+}
+
+.userChange::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width : 2540px) {
+	.userChange {
+		top: 24%;
+		left: 40.157%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+@media screen and (max-width : 1980px) {
+	.userChange {
+		top: 24%;
+		left: 37.37%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+@media screen and (max-width : 1280px) {
+	.userChange {
+		top: 24%;
+		left: 30.47%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+@media screen and (max-width : 720px) {
+	.userChange {
+		top: 24%;
+		left: 15.28%;
+		width: 500px;
+		height: 570px;
+	}
+}
+
+form {
+	position: absolute;
+	inset: 2px;
+	background: #28292d;
+	padding: 30px;
+	border-radius: 8px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+    text-align: center;
+}
+
+h2 {
+	color: #45f3ff;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+
+.submitButton {
+    color: black;
+    font-weight: 600;
+    background-color: #45f3ff;
+    padding: 3%;
+	width: 300px;
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #e31212;
+}
+
+.closeForm {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	background-color: red;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}

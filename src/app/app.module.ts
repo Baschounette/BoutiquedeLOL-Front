@@ -29,6 +29,8 @@ import { UsersChangeComponent } from './components/templates/users-change/users-
 import { DetailChangeComponent } from './components/templates/detail-change/detail-change.component';
 import { StoreComponent } from './components/Logged/store/store.component';
 import { CookieService } from 'ngx-cookie-service';
+import { DeleteStoreComponent } from './components/templates/delete-store/delete-store.component';
+import { ValidateStoreComponent } from './components/templates/validate-store/validate-store.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { CookieService } from 'ngx-cookie-service';
     Product2Component,
     UsersChangeComponent,
     DetailChangeComponent,
-    StoreComponent
+    StoreComponent,
+    DeleteStoreComponent,
+    ValidateStoreComponent
   ],
   imports: [
     BrowserModule,
